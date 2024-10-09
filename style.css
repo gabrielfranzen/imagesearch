@@ -11,8 +11,10 @@ body{
     color: white;
 }
 .container{
-    max-width: 600px;
+    max-width: 680px;
     margin: auto;
+    padding: 40px;
+    box-sizing: border-box;
 }
 h1{
     text-align: center;
@@ -111,4 +113,19 @@ form button:hover{
     height: 280px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+/* Ajuste para responsividade */
+
+@media (max-width: 1024px) {
+    #imagens {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #imagens {
+        grid-template-columns: 1fr;
+    }
+    
 }
