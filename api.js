@@ -8,7 +8,7 @@ const verMais = document.querySelector("#ver-mais");
 let pesquisa = "";
 let pagina = 1;
 
-async function searchImages(){
+async function pesquisarImagens(){
 
     pesquisa = inputPesquisa.value;
     const url = `https://api.unsplash.com/search/photos?page=${pagina}&query=${pesquisa}&client_id=${acessKey}&per_page=12&lang=pt`;
@@ -35,19 +35,26 @@ async function searchImages(){
         divImagens.appendChild(imageLink);
     })
 
-    verMais.style.display = "block";
+    if (divImagens.children.length > 0) {
+        verMais.style.display = "block";
+    } else {
+        verMais.style.display = "none";
+        divImagens.innerHTML = "Imagens não encontradas com este termo"
+    }
 }
+
+
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
     pagina = 1;
-    searchImages();
+    pesquisarImagens();
 })
 
 
 verMais.addEventListener("click", ()=>{
     pagina++;
-    searchImages();
+    pesquisarImagens();
 })
 
 
