@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Search Engine</title>
+    <title>API - pesquisar imagens</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Search Images</h1>
-    <h5>(use one keyword)</h5>
-    <form>
-        <input type="text" id="pesquisa" placeholder="Search here...">
-        <button id="botao">🔍</button>
-    </form>
+    <div class="container">
+        <h1>ENCONTRE IMAGENS</h1>
+        <h4 id="desc">A API utilizada foi do site <a href="https://unsplash.com/pt-br" target="_blank">unsplash.com</a>, que disponibiliza imagens gratuitas sem copyright.</h4>
+        
+        <form>
+            <input type="text" id="pesquisa" placeholder="Pesquise aqui ...">
+            <button id="botao">🔍</button>
+        </form>
+
+        <ul>
+            <li>
+                Para ler a documentação da API: <a href="https://unsplash.com/documentation#search-photos" target="_blank">clique aqui</a>
+            </li>
+            <li>
+                Para ver como funciona o código: <a href="https://github.com/gabrielfranzen/imagesearch" target="_blank">clique aqui</a>
+            </li>
+        </ul>
+    </div>
+    
     <div id="imagens"></div>
-    <button id="ver-mais">View more</button>
+    <button id="ver-mais">Ver mais</button>
     <script src="api.js"></script>
 </body>
 </html>

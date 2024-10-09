@@ -1,7 +1,8 @@
+
 *{
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
@@ -9,22 +10,37 @@ body{
     background: #0e0a1d;
     color: white;
 }
-
-
+.container{
+    max-width: 600px;
+    margin: auto;
+}
 h1{
     text-align: center;
     margin: 100px auto 0px;
     font-weight: 600;
 }
-h5{
+h4{
     text-align: center;
-    margin: 15px auto 50px;
+}
+ul{
+    list-style: none;
+}
+li > a, h4 > a{
+    color: rgb(3, 226, 255);
+    transition: all 0.4s;
+}
+a:hover{
+    font-size: 19px;
+    color: rgb(0, 140, 255);
+}
+#desc{
+    margin: 20px auto 30px;
+    font-size: 18PX;
+    font-weight: 400;
 }
 
 form{
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
+    margin: 20px auto;
     height: 80px;
     background: #222546;
     display: flex;
@@ -56,7 +72,7 @@ form button{
 }
 
 form button:hover{
-    background: #c7c7c7;
+    background: rgb(0, 140, 255);
 }
 
 ::placeholder{
@@ -74,13 +90,18 @@ form button:hover{
     margin: 30px auto 100px;
     cursor: pointer;
     display: none;
+    transition: all 0.4s;
 }
-
+#ver-mais:hover{
+    transform: scale(1.1);
+    background-color: rgb(0, 140, 255);
+    color: white;
+}
 
 #imagens{
     width: 80%;
     max-width: 1300px;
-    margin: 100px auto 50px;
+    margin: 80px auto 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 40px;

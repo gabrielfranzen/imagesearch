@@ -11,7 +11,7 @@ let pagina = 1;
 async function searchImages(){
 
     pesquisa = inputPesquisa.value;
-    const url = `https://api.unsplash.com/search/photos?page=${pagina}&query=${pesquisa}&client_id=${acessKey}&per_page=12`;
+    const url = `https://api.unsplash.com/search/photos?page=${pagina}&query=${pesquisa}&client_id=${acessKey}&per_page=12&lang=pt`;
 
     const response = await fetch(url);
     const data = await response.json();
